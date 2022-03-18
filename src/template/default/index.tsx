@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Header } from "../../components/Header";
 import { Container } from "./styles";
 
 type ReactProps = {
@@ -6,5 +7,10 @@ type ReactProps = {
 };
 
 export const Default = ({ children }: ReactProps) => {
-  return <Container>{children}</Container>;
+  return (
+    <Container>
+      <Header />
+      {children}
+    </Container>
+  );
 };

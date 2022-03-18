@@ -1,11 +1,23 @@
 import { Container, Title, Description, Image } from "./styles";
 
-export function AlbumItem() {
+type AlbumItemProps = {
+  size: string;
+  title: string;
+  description: string;
+  imgSize: string;
+};
+
+export function AlbumItem({
+  size,
+  title,
+  description,
+  imgSize,
+}: AlbumItemProps) {
   return (
-    <Container>
-      <Image src="https://via.placeholder.com/160/170" />
-      <Title>Nombre del Álbum</Title>
-      <Description>Nombre del Artista</Description>
+    <Container size={size}>
+      <Image imgSize={imgSize} src="https://via.placeholder.com/160/170" />
+      <Title> {title} </Title>
+      <Description> {description} </Description>
     </Container>
   );
 }

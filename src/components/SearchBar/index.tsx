@@ -2,7 +2,7 @@ import { Container, Label, Input } from "./styles";
 
 type SearchBarProps = {
   handleSetTerm: (props: string) => void;
-  searchTerm: string | undefined;
+  searchTerm: string;
 };
 
 export const SearchBar = ({ handleSetTerm, searchTerm }: SearchBarProps) => {

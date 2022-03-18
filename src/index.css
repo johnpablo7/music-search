@@ -12,6 +12,11 @@
   --fontLarge: 24px;
   --fontMedium: 18px;
   --fontSmall: 14px;
+
+  --small: 100px;
+  --medium: 170px;
+  --large: 200px;
+  --xLarge: 220px;
 }
 
 body {
@@ -23,15 +28,18 @@ body {
   width: 100%;
   height: 100%;
   font-size: 16px;
+  background-color: var(--primary);
 }
 
 * {
   box-sizing: border-box;
 }
 
+html,
+body,
 #root {
   width: 100%;
-  height: 100%;
+  box-sizing: border-box;
 }
 
 body,

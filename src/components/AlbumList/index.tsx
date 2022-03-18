@@ -10,10 +10,30 @@ export function AlbumList({ title, ...props }: AlbumProps) {
     <Container>
       <Subtitle> {title} </Subtitle>
       <Wrapper>
-        <AlbumItem />
-        <AlbumItem />
-        <AlbumItem />
-        <AlbumItem />
+        <AlbumItem
+          title="Nombre del Álbum"
+          description="Nombre del Artista"
+          size="medium"
+          imgSize="medium"
+        />
+        <AlbumItem
+          title="Nombre del Álbum"
+          description="Nombre del Artista"
+          size="medium"
+          imgSize="medium"
+        />
+        <AlbumItem
+          title="Nombre del Álbum"
+          description="Nombre del Artista"
+          size="medium"
+          imgSize="medium"
+        />
+        <AlbumItem
+          title="Nombre del Álbum"
+          description="Nombre del Artista"
+          size="medium"
+          imgSize="medium"
+        />
       </Wrapper>
     </Container>
   );
