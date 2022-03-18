@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  padding: 0px var(--paddingMain);
   flex-direction: column;
+  padding: 0px var(--paddingMain);
+  margin-bottom: 80px;
 `;
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
   gap: 65px;
-  overflow-y: hidden;
   overflow-x: clip;
 `;
 

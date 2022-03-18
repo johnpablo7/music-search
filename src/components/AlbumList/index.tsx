@@ -1,12 +1,15 @@
 import { AlbumItem } from "../AlbumItem";
 import { Container, Subtitle, Wrapper } from "./styles";
 
-export function AlbumList() {
+type AlbumProps = {
+  title: string;
+};
+
+export function AlbumList({ title, ...props }: AlbumProps) {
   return (
     <Container>
-      <Subtitle>Búsquedas recientes</Subtitle>
+      <Subtitle> {title} </Subtitle>
       <Wrapper>
-        <AlbumItem />
         <AlbumItem />
         <AlbumItem />
         <AlbumItem />
