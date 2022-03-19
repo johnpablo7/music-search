@@ -5,6 +5,7 @@ type AlbumItemProps = {
   title: string;
   description: string;
   imgSize: string;
+  imgUrl: string;
 };
 
 export function AlbumItem({
@@ -12,10 +13,11 @@ export function AlbumItem({
   title,
   description,
   imgSize,
+  imgUrl,
 }: AlbumItemProps) {
   return (
     <Container size={size}>
-      <Image imgSize={imgSize} src="https://via.placeholder.com/160/170" />
+      <Image imgSize={imgSize} src={imgUrl} />
       <Title> {title} </Title>
       <Description> {description} </Description>
     </Container>

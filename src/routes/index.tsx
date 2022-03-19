@@ -18,7 +18,7 @@ export const AppRouter = () => {
           element={<AppRoute authenticated component={<Home />} />}
         />
         <Route
-          path="/list-track"
+          path="/track/:id"
           element={<AppRoute authenticated component={<TrackDetails />} />}
         />
         <Route

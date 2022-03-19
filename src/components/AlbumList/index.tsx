@@ -3,37 +3,23 @@ import { Container, Subtitle, Wrapper } from "./styles";
 
 type AlbumProps = {
   title: string;
+  albums: any[];
 };
 
-export function AlbumList({ title, ...props }: AlbumProps) {
+export function AlbumList({ title, albums, ...props }: AlbumProps) {
   return (
     <Container>
       <Subtitle> {title} </Subtitle>
       <Wrapper>
-        <AlbumItem
-          title="Nombre del Álbum"
-          description="Nombre del Artista"
-          size="medium"
-          imgSize="medium"
-        />
-        <AlbumItem
-          title="Nombre del Álbum"
-          description="Nombre del Artista"
-          size="medium"
-          imgSize="medium"
-        />
-        <AlbumItem
-          title="Nombre del Álbum"
-          description="Nombre del Artista"
-          size="medium"
-          imgSize="medium"
-        />
-        <AlbumItem
-          title="Nombre del Álbum"
-          description="Nombre del Artista"
-          size="medium"
-          imgSize="medium"
-        />
+        {albums.map((album) => (
+          <AlbumItem
+            title={album.name}
+            description="Nombre del Artista"
+            size="medium"
+            imgSize="medium"
+            imgUrl={album.images[1].url}
+          />
+        ))}
       </Wrapper>
     </Container>
   );

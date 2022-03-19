@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { AlbumList } from "../../components/AlbumList";
 import { SearchBar } from "../../components/SearchBar";
 import { axiosSpotify } from "../../utils/axiosSpotify";
@@ -63,7 +64,10 @@ export const Home = () => {
       ) : (
         <>
           {!!albums.length && (
-            <AlbumList title={`Albums encontrados para "${searchTerm}"`} />
+            <AlbumList
+              title={`Albums encontrados para "${searchTerm}"`}
+              albums={albums}
+            />
           )}
           {!!tracks.length && (
             <div>
@@ -71,7 +75,9 @@ export const Home = () => {
               <ul>
                 {tracks.map((track) => (
                   <li key={track.id}>
-                    {track.name} - {track.artists[0].name}
+                    <Link to={"/track/" + track.id}>
+                      {track.name} - {track.artists[0].name}
+                    </Link>
                   </li>
                 ))}
               </ul>
