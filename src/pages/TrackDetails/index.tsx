@@ -3,12 +3,11 @@ import { AlbumItem } from "../../components/AlbumItem";
 import { TrackItems } from "../../components/TrackItems";
 import GoBack from "../../assets/images/back.png";
 
-export const ListTrack = () => {
+export const TrackDetails = () => {
   return (
     <Container>
       <Row>
         <h2>
-          {" "}
           <Image src={GoBack} alt="back" /> Volver
         </h2>
       </Row>

@@ -1,11 +1,14 @@
-import { AppRouter } from "./routers/AppRouter";
+import { AuthProvider } from "./context/auth";
+import { AppRouter } from "./routes";
 import { Default } from "./template/default";
 
 function App() {
   return (
-    <Default>
-      <AppRouter />
-    </Default>
+    <AuthProvider>
+      <Default>
+        <AppRouter />
+      </Default>
+    </AuthProvider>
   );
 }
 

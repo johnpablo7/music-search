@@ -15,7 +15,7 @@ export const Image = styled.img`
 
 export const Title = styled.h3`
   font-size: var(--fontSmall);
-  color: var(--terceary);
+  color: var(--tertiary);
   margin: 10px;
 `;
 

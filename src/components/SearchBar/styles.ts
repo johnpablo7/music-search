@@ -9,12 +9,12 @@ export const Container = styled.div`
 
 export const Label = styled.label`
   font-size: var(--fontMedium);
-  color: var(--terceary);
+  color: var(--tertiary);
 `;
 
 export const Input = styled.input`
   font-size: var(--fontXLarge);
-  line-height: var(--fontXLarge)
+  line-height: var(--fontXLarge);
   font-weight: bold;
   color: var(--secondary);
   height: 80px;
@@ -25,5 +25,4 @@ export const Input = styled.input`
   color: var(--);
   outline: 0;
   padding-left: 10px;
-
 `;

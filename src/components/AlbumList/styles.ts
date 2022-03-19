@@ -17,6 +17,6 @@ export const Wrapper = styled.div`
 
 export const Subtitle = styled.h2`
   font-size: var(--fontMedium);
-  color: var(--terceary);
+  color: var(--tertiary);
   margin-bottom: 35px;
 `;

@@ -1,5 +1,7 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { Header } from "../../components/Header";
+import { useAuth } from "../../context/auth";
+import { setAxiosAuth } from "../../utils/axiosSpotify";
 import { Container } from "./styles";
 
 type ReactProps = {
@@ -7,6 +9,12 @@ type ReactProps = {
 };
 
 export const Default = ({ children }: ReactProps) => {
+  const { auth } = useAuth();
+
+  useEffect(() => {
+    setAxiosAuth(auth);
+  }, [auth]);
+
   return (
     <Container>
       <Header />

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Label, Input } from "./styles";
 
 type SearchBarProps = {
@@ -6,14 +7,18 @@ type SearchBarProps = {
 };
 
 export const SearchBar = ({ handleSetTerm, searchTerm }: SearchBarProps) => {
+  const [query, setQuery] = useState("");
+
   return (
     <Container>
       <Label>Buscar</Label>
       <Input
-        onChange={(e) => handleSetTerm(e.target.value)}
-        value={searchTerm}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
         placeholder="Artistas, canciones pódcasts"
+        onKeyUp={(e) => e.key === "Enter" && handleSetTerm(query)}
       />
+      <button onClick={(e) => handleSetTerm(query)}>Buscar</button>
     </Container>
   );
 };
